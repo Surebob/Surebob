@@ -1,7 +1,7 @@
 <a href="https://github.com/Surebob">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Surebob/Surebob/main/dark_mode.svg">
-    <img width="100%" alt="Grigori Karapetyan — builder of AI infrastructure, developer tools, and messaging systems" src="https://raw.githubusercontent.com/Surebob/Surebob/main/light_mode.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Surebob/Surebob/main/dark_mode.svg?v=20260820">
+    <img width="100%" alt="Grigori Karapetyan — builder of AI infrastructure, developer tools, and messaging systems" src="https://raw.githubusercontent.com/Surebob/Surebob/main/light_mode.svg?v=20260820">
   </picture>
 </a>
 
