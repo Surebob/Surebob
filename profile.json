@@ -1,0 +1,17 @@
+{
+  "username": "Surebob",
+  "terminal_user": "greg",
+  "display_name": "Grigori Karapetyan",
+  "headline": "building AI infrastructure & developer tools",
+  "location": "Los Angeles, CA",
+  "company": "Runtools AI",
+  "focus_primary": "AI infra · developer tools",
+  "focus_systems": "messaging · reliability · macOS",
+  "stack": ["Rust", "TypeScript", "Swift", "Python", "C#"],
+  "links": [
+    {"label": "web.01", "value": "runtools.ai"},
+    {"label": "web.02", "value": "loadguard.ai"},
+    {"label": "social", "value": "@gregkara6"}
+  ],
+  "avatar_ascii": "assets/avatar.txt"
+}
