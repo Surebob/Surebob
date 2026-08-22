@@ -2,16 +2,25 @@
   "username": "Surebob",
   "terminal_user": "greg",
   "display_name": "Grigori Karapetyan",
-  "headline": "building AI infrastructure & developer tools",
-  "location": "Los Angeles, CA",
-  "company": "Runtools AI",
-  "focus_primary": "AI infra · developer tools",
-  "focus_systems": "messaging · reliability · macOS",
-  "stack": ["Rust", "TypeScript", "Swift", "Python", "C#"],
+  "headline": "founder · systems engineer · product builder",
+  "details": [
+    {"label": "identity.base", "value": "Los Angeles, CA"},
+    {"label": "building.now", "value": "Runtools AI · Sendblue · Load Guard"},
+    {"label": "focus.product", "value": "AI developer tools · messaging infrastructure"},
+    {"label": "focus.systems", "value": "distributed fleets · native macOS · reliability"},
+    {"label": "open_source", "value": "WemWacker · pano-viewer"}
+  ],
+  "stack": ["Rust", "Swift", "Objective-C", "TypeScript", "Python", "C#", "SQL"],
+  "principles": [
+    "own the hard parts",
+    "automate the boring parts",
+    "ship for real users"
+  ],
   "links": [
-    {"label": "web.01", "value": "runtools.ai"},
-    {"label": "web.02", "value": "loadguard.ai"},
-    {"label": "social", "value": "@gregkara6"}
+    {"label": "web.runtools", "value": "runtools.ai"},
+    {"label": "web.loadguard", "value": "loadguard.ai"},
+    {"label": "web.sendblue", "value": "sendblue.com"},
+    {"label": "social.x", "value": "@gregkara6"}
   ],
   "avatar_ascii": "assets/avatar.txt"
 }

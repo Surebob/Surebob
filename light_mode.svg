@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="520" viewBox="0 0 1020 520" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640" role="img" aria-labelledby="title desc">
   <title id="title">Grigori Karapetyan — GitHub profile</title>
   <desc id="desc">Terminal-style profile with an ASCII portrait, current focus, technology stack, public links, and live GitHub statistics.</desc>
   <defs>
@@ -19,79 +19,94 @@
       .prompt { font-size: 14px; font-weight: 600; }
       .headline { font-size: 14px; letter-spacing: 0.15px; }
       .name { font-size: 28px; font-weight: 750; letter-spacing: -0.8px; }
-      .ascii { font-size: 12px; font-weight: 600; white-space: pre; }
+      .ascii { font-size: 11px; font-weight: 600; white-space: pre; }
       .chip { font-size: 12px; font-weight: 700; }
+      .principle { font-size: 11px; font-weight: 650; }
       .stat { font-size: 18px; font-weight: 750; }
       .stat-label { font-size: 9px; font-weight: 700; letter-spacing: 0.8px; }
       .micro { font-size: 10px; letter-spacing: 0.5px; }
     </style>
   </defs>
 
-  <rect x="12" y="12" width="996" height="496" rx="18" fill="url(#surface)" stroke="#d8bdc5" filter="url(#shadow)"/>
-  <rect x="12" y="12" width="996" height="496" rx="18" fill="url(#grid)"/>
-  <path d="M 30 55 H 990" stroke="#d8bdc5"/>
+  <rect x="12" y="12" width="1096" height="616" rx="18" fill="url(#surface)" stroke="#d8bdc5" filter="url(#shadow)"/>
+  <rect x="12" y="12" width="1096" height="616" rx="18" fill="url(#grid)"/>
+  <path d="M 30 55 H 1090" stroke="#d8bdc5"/>
   <circle cx="35" cy="34" r="5" fill="#b31338"/>
   <circle cx="54" cy="34" r="5" fill="#d85a75" opacity="0.72"/>
   <circle cx="73" cy="34" r="5" fill="#147b62" opacity="0.88"/>
   <text x="94" y="38" class="micro" fill="#79616b">~/profiles/Surebob</text>
-  <rect x="924" y="25" width="62" height="18" rx="9" fill="#f4e9ec" stroke="#d8bdc5"/>
-  <circle cx="937" cy="34" r="3" fill="#147b62"/>
-  <text x="946" y="37.5" class="micro" fill="#79616b">LIVE</text>
+  <rect x="1024" y="25" width="62" height="18" rx="9" fill="#f4e9ec" stroke="#d8bdc5"/>
+  <circle cx="1037" cy="34" r="3" fill="#147b62"/>
+  <text x="1046" y="37.5" class="micro" fill="#79616b">LIVE</text>
 
-  <rect x="28" y="70" width="344" height="420" rx="12" fill="#f4e9ec" opacity="0.54" stroke="#d8bdc5"/>
-  <text class="ascii" fill="#26191f" opacity="0.88"><tspan x="31" y="82">               %@@%%*#%</tspan>
-<tspan x="31" y="97">             @@@#*#**#@@#</tspan>
-<tspan x="31" y="112">           %@%**##%*%%%@**%</tspan>
-<tspan x="31" y="127">         @@#*%#*%@%#@%@%*%%</tspan>
-<tspan x="31" y="142">        @@@%%@@@@@@@%++%%%%</tspan>
-<tspan x="31" y="157">         %@@@@@@@*-.. .%@%%</tspan>
-<tspan x="31" y="172">          @**+++-..    -*@@+</tspan>
-<tspan x="31" y="187">           #+=::-:..==: :@*==</tspan>
-<tspan x="31" y="202">            ++=-:+#%%%@@+-++</tspan>
-<tspan x="31" y="217">            @@%@%#@@%@@%  *:</tspan>
-<tspan x="31" y="232">             @@@% :*%#+: :=</tspan>
-<tspan x="31" y="247">              #=+  ..   .-:--</tspan>
-<tspan x="31" y="262">              =.*++=.-. -=+..@##</tspan>
-<tspan x="31" y="277">               +%@*++++:+%= =@@@%%*</tspan>
-<tspan x="31" y="292">                %#**-.+%@+  %@@@%@@%******</tspan>
-<tspan x="31" y="307">               @@%+=-+%@=  :@@@@@%@@@%%###</tspan>
-<tspan x="31" y="322">          #%@@@@@**@@@*.   #@@@@@%%@@@@@@@</tspan>
-<tspan x="31" y="337">     ##%@@@@@@@@@#-%#%-   -@@@@%%@@@@@@@@@</tspan>
-<tspan x="31" y="352">  %%@@@@@@@%@@@@@*#@@%@%:.=@@@@@@@%@@@@@@@</tspan>
-<tspan x="31" y="367">  %@@@@@@@@@%@@@%*#@@@%++.+@@@@@@@%@@@@@@%</tspan>
-<tspan x="31" y="382"> @%@@@@@@@%@@@@@+==@ %. . #@@@@@@%%@@@@@@@</tspan>
-<tspan x="31" y="397">%@%@@@@@@%@@@@@=  #@   : .@@@@@@@%@@@@@@@@</tspan>
-<tspan x="31" y="412">%@%@%@@@@@@@@@@..+@@  :. -@@@@@@%%@@@@@@@%</tspan>
-<tspan x="31" y="427">%@@@%@@@%@@@@@+ -@@@ *.  +@@@@@@#@@@@@@@@@</tspan>
-<tspan x="31" y="442">@@@@%@@@%@@@@@: #@@@ -   #@@@@@@%@@@@@@@@%</tspan></text>
-  <path d="M 390 70 V 490" stroke="#d8bdc5"/>
-  <path d="M 390 70 V 201" stroke="#b31338" stroke-width="3"/>
-  <text x="47" y="469" class="micro" fill="#79616b">ASCII // AVATAR SIGNAL</text>
-  <circle cx="340" cy="465" r="4" fill="#147b62"/>
+  <rect x="28" y="70" width="400" height="548" rx="12" fill="#f4e9ec" opacity="0.54" stroke="#d8bdc5"/>
+  <text class="ascii" fill="#26191f" opacity="0.88"><tspan x="43" y="82.0"></tspan>
+<tspan x="43" y="93.8"></tspan>
+<tspan x="43" y="105.6">                        .::::.</tspan>
+<tspan x="43" y="117.4">                    .:----------.</tspan>
+<tspan x="43" y="129.2">                   :----====++==-:</tspan>
+<tspan x="43" y="141.0">                  ..:---===++===--:.</tspan>
+<tspan x="43" y="152.8">                .===*##****##%%%%%#=:</tspan>
+<tspan x="43" y="164.6">               .=#%%@@@@@@@@@@@@@@@*+-</tspan>
+<tspan x="43" y="176.4">              .:=#%%@@@@@@@@@@@@@@@#*+:</tspan>
+<tspan x="43" y="188.2">              .:=*%@@@@@@@@@@@@@@@@%*+:</tspan>
+<tspan x="43" y="200.0">              .:=*#####%@@@@#+=++*#%%=*%-</tspan>
+<tspan x="43" y="211.8">             :-:+=:::..:+%@*.  ::-=#%+%%+</tspan>
+<tspan x="43" y="223.6">             -+-+=:..::..%@#::-==+%@%+=%=</tspan>
+<tspan x="43" y="235.4">             :*=+*#*+++**@@@@%%%@@@@%+%#</tspan>
+<tspan x="43" y="247.2">              ===#@@@@@%%@@@@%@@@@@@#=@-</tspan>
+<tspan x="43" y="259.0">               =:*#@@@###%@@%%%%@@@@+.=.</tspan>
+<tspan x="43" y="270.8">               :.=#%@+++..=::*#+*@@#:</tspan>
+<tspan x="43" y="282.6">                 .+#* .::..:-=: :**=  .</tspan>
+<tspan x="43" y="294.4">                . .-- -=+++**##-.=-  .</tspan>
+<tspan x="43" y="306.2">                .     -#+:..=@%: .    :.</tspan>
+<tspan x="43" y="318.0">                 ..    +*+++##=       .-:</tspan>
+<tspan x="43" y="329.8">                 .      :+++=.        :::-:.</tspan>
+<tspan x="43" y="341.6">              .::   .:                -:::-:-:.</tspan>
+<tspan x="43" y="353.4">           .:::.     ---:::...::     --:::-::::::.</tspan>
+<tspan x="43" y="365.2">         .::.        .=+++++++=.    .-------::::::::..</tspan>
+<tspan x="43" y="377.0">      .::.   ..       :+*****+      --------:::-::::::::</tspan>
+<tspan x="43" y="388.8">   ....        .      :-*****      :------:.::------::::</tspan>
+<tspan x="43" y="400.6">      ..........      -+*###*.    .-------:------------:</tspan>
+<tspan x="43" y="412.4"> .  ............       #%%%#*.    ----------:---------::</tspan>
+<tspan x="43" y="424.2">    ...........:       +@%%*     :------::-::--------:::</tspan>
+<tspan x="43" y="436.0">   .......:...::       :%%*     .-:-------::---------:-:</tspan>
+<tspan x="43" y="447.8">   ...........::        +#      ---------::---------::::</tspan></text>
+  <path d="M 446 70 V 618" stroke="#d8bdc5"/>
+  <path d="M 446 70 V 218" stroke="#b31338" stroke-width="3"/>
+  <text x="47" y="548" class="prompt" fill="#b31338">&gt; portrait.render</text>
+  <text x="47" y="571" class="body" fill="#79616b">56 cols · cell-ratio corrected</text>
+  <text x="47" y="597" class="micro" fill="#79616b">ASCII // AVATAR SIGNAL</text>
+  <circle cx="396" cy="593" r="4" fill="#147b62"/>
 
-  <text x="420" y="86" class="prompt" fill="#b31338">greg@surebob</text>
-  <text x="552" y="86" class="prompt" fill="#79616b">:~$ whoami</text>
-  <text x="420" y="122" class="name" fill="#26191f">Grigori Karapetyan</text>
-  <text x="420" y="148" class="headline" fill="#79616b">building AI infrastructure &amp; developer tools</text>
-  <line x1="420" y1="161" x2="985" y2="161" stroke="#d8bdc5"/>
+  <text x="476" y="86" class="prompt" fill="#b31338">greg@surebob</text>
+  <text x="608" y="86" class="prompt" fill="#79616b">:~$ whoami --verbose</text>
+  <text x="476" y="122" class="name" fill="#26191f">Grigori Karapetyan</text>
+  <text x="476" y="148" class="headline" fill="#79616b">founder · systems engineer · product builder</text>
+  <line x1="476" y1="161" x2="1090" y2="161" stroke="#d8bdc5"/>
 
-  <text x="420" y="180" class="body"><tspan fill="#79616b">identity.location</tspan><tspan x="550" fill="#b69da7">····</tspan><tspan x="590" fill="#7a2940">Los Angeles, CA</tspan></text>
-<text x="420" y="204" class="body"><tspan fill="#79616b">identity.company</tspan><tspan x="550" fill="#b69da7">····</tspan><tspan x="590" fill="#7a2940">Runtools AI</tspan></text>
-<text x="420" y="228" class="body"><tspan fill="#79616b">focus.primary</tspan><tspan x="550" fill="#b69da7">····</tspan><tspan x="590" fill="#7a2940">AI infra · developer tools</tspan></text>
-<text x="420" y="252" class="body"><tspan fill="#79616b">focus.system</tspan><tspan x="550" fill="#b69da7">····</tspan><tspan x="590" fill="#7a2940">messaging · reliability · macOS</tspan></text>
+  <text x="476" y="184" class="body"><tspan fill="#79616b">identity.base</tspan><tspan x="620" fill="#b69da7">····</tspan><tspan x="660" fill="#7a2940">Los Angeles, CA</tspan></text>
+<text x="476" y="208" class="body"><tspan fill="#79616b">building.now</tspan><tspan x="620" fill="#b69da7">····</tspan><tspan x="660" fill="#7a2940">Runtools AI · Sendblue · Load Guard</tspan></text>
+<text x="476" y="232" class="body"><tspan fill="#79616b">focus.product</tspan><tspan x="620" fill="#b69da7">····</tspan><tspan x="660" fill="#7a2940">AI developer tools · messaging infrastructure</tspan></text>
+<text x="476" y="256" class="body"><tspan fill="#79616b">focus.systems</tspan><tspan x="620" fill="#b69da7">····</tspan><tspan x="660" fill="#7a2940">distributed fleets · native macOS · reliability</tspan></text>
+<text x="476" y="280" class="body"><tspan fill="#79616b">open_source</tspan><tspan x="620" fill="#b69da7">····</tspan><tspan x="660" fill="#7a2940">WemWacker · pano-viewer</tspan></text>
 
-  <text x="420" y="282" class="prompt" fill="#b31338">&gt; stack --active</text>
-  <rect x="420" y="294" width="56" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="448.0" y="313" text-anchor="middle" class="chip" fill="#7a2940">Rust</text><rect x="485" y="294" width="104" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="537.0" y="313" text-anchor="middle" class="chip" fill="#7a2940">TypeScript</text><rect x="598" y="294" width="64" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="630.0" y="313" text-anchor="middle" class="chip" fill="#7a2940">Swift</text><rect x="671" y="294" width="72" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="707.0" y="313" text-anchor="middle" class="chip" fill="#7a2940">Python</text><rect x="752" y="294" width="40" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="772.0" y="313" text-anchor="middle" class="chip" fill="#7a2940">C#</text>
+  <text x="476" y="318" class="prompt" fill="#b31338">&gt; stack --active</text>
+  <rect x="476" y="331" width="56" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="504.0" y="350" text-anchor="middle" class="chip" fill="#7a2940">Rust</text><rect x="541" y="331" width="64" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="573.0" y="350" text-anchor="middle" class="chip" fill="#7a2940">Swift</text><rect x="614" y="331" width="112" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="670.0" y="350" text-anchor="middle" class="chip" fill="#7a2940">Objective-C</text><rect x="735" y="331" width="104" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="787.0" y="350" text-anchor="middle" class="chip" fill="#7a2940">TypeScript</text><rect x="848" y="331" width="72" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="884.0" y="350" text-anchor="middle" class="chip" fill="#7a2940">Python</text><rect x="929" y="331" width="40" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="949.0" y="350" text-anchor="middle" class="chip" fill="#7a2940">C#</text><rect x="978" y="331" width="48" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="1002.0" y="350" text-anchor="middle" class="chip" fill="#7a2940">SQL</text>
 
-  <text x="420" y="346" class="prompt" fill="#b31338">&gt; links --public</text>
-  <text x="420" y="366" class="body"><tspan fill="#79616b">web.01</tspan><tspan x="473" fill="#b69da7">····</tspan><tspan x="505" fill="#7a2940">runtools.ai</tspan></text>
-<text x="420" y="388" class="body"><tspan fill="#79616b">web.02</tspan><tspan x="473" fill="#b69da7">····</tspan><tspan x="505" fill="#7a2940">loadguard.ai</tspan></text>
-<text x="420" y="410" class="body"><tspan fill="#79616b">social</tspan><tspan x="473" fill="#b69da7">····</tspan><tspan x="505" fill="#7a2940">@gregkara6</tspan></text>
+  <text x="476" y="392" class="prompt" fill="#b31338">&gt; principles --signal-only</text>
+  <rect x="476" y="405" width="167" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="559.5" y="424" text-anchor="middle" class="principle" fill="#79616b">01 own the hard parts</text><rect x="652" y="405" width="216" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="760.0" y="424" text-anchor="middle" class="principle" fill="#79616b">02 automate the boring parts</text><rect x="877" y="405" width="174" height="28" rx="6" fill="#f4e9ec" stroke="#d8bdc5"/><text x="964.0" y="424" text-anchor="middle" class="principle" fill="#79616b">03 ship for real users</text>
 
-  <line x1="420" y1="438" x2="985" y2="438" stroke="#d8bdc5"/>
-  <text x="420" y="470" class="stat" fill="#26191f">6</text><text x="420" y="490" class="stat-label" fill="#79616b">PUBLIC REPOS</text><line x1="548" y1="451" x2="548" y2="493" stroke="#d8bdc5"/><text x="563" y="470" class="stat" fill="#26191f">5.2k</text><text x="563" y="490" class="stat-label" fill="#79616b">CONTRIBS · 365D</text><line x1="691" y1="451" x2="691" y2="493" stroke="#d8bdc5"/><text x="706" y="470" class="stat" fill="#26191f">5</text><text x="706" y="490" class="stat-label" fill="#79616b">FOLLOWERS</text><line x1="834" y1="451" x2="834" y2="493" stroke="#d8bdc5"/><text x="849" y="470" class="stat" fill="#26191f">4y 11m</text><text x="849" y="490" class="stat-label" fill="#79616b">GITHUB UPTIME</text>
+  <text x="476" y="467" class="prompt" fill="#b31338">&gt; links --public</text>
+  <text x="476" y="490" class="body"><tspan fill="#79616b">web.runtools</tspan><tspan x="574" fill="#b69da7">····</tspan><tspan x="614" fill="#7a2940">runtools.ai</tspan></text>
+<text x="476" y="512" class="body"><tspan fill="#79616b">web.loadguard</tspan><tspan x="574" fill="#b69da7">····</tspan><tspan x="614" fill="#7a2940">loadguard.ai</tspan></text>
+<text x="476" y="534" class="body"><tspan fill="#79616b">web.sendblue</tspan><tspan x="574" fill="#b69da7">····</tspan><tspan x="614" fill="#7a2940">sendblue.com</tspan></text>
+<text x="476" y="556" class="body"><tspan fill="#79616b">social.x</tspan><tspan x="574" fill="#b69da7">····</tspan><tspan x="614" fill="#7a2940">@gregkara6</tspan></text>
+
+  <line x1="476" y1="568" x2="1090" y2="568" stroke="#d8bdc5"/>
+  <text x="476" y="598" class="stat" fill="#26191f">6</text><text x="476" y="618" class="stat-label" fill="#79616b">PUBLIC REPOS</text><line x1="612" y1="580" x2="612" y2="620" stroke="#d8bdc5"/><text x="627" y="598" class="stat" fill="#26191f">5.2k</text><text x="627" y="618" class="stat-label" fill="#79616b">CONTRIBS · 365D</text><line x1="763" y1="580" x2="763" y2="620" stroke="#d8bdc5"/><text x="778" y="598" class="stat" fill="#26191f">5</text><text x="778" y="618" class="stat-label" fill="#79616b">FOLLOWERS</text><line x1="914" y1="580" x2="914" y2="620" stroke="#d8bdc5"/><text x="929" y="598" class="stat" fill="#26191f">4y 11m</text><text x="929" y="618" class="stat-label" fill="#79616b">GITHUB UPTIME</text>
 
   <a href="https://github.com/Surebob">
-    <rect x="12" y="12" width="996" height="496" rx="18" fill="transparent"/>
+    <rect x="12" y="12" width="1096" height="616" rx="18" fill="transparent"/>
   </a>
 </svg>

@@ -193,11 +193,12 @@ def text_row(
     y: int,
     colors: dict,
     *,
-    dots_x: int = 550,
-    value_x: int = 590,
+    x: int = 476,
+    dots_x: int = 620,
+    value_x: int = 660,
 ) -> str:
     return (
-        f'<text x="420" y="{y}" class="body">'
+        f'<text x="{x}" y="{y}" class="body">'
         f'<tspan fill="{colors["muted"]}">{esc(label)}</tspan>'
         f'<tspan x="{dots_x}" fill="{colors["faint"]}">····</tspan>'
         f'<tspan x="{value_x}" fill="{colors["value"]}">{esc(value)}</tspan>'
@@ -209,38 +210,47 @@ def render_svg(config: dict, stats: dict, avatar: list[str], theme_name: str) ->
     c = THEMES[theme_name]
     profile_url = f"https://github.com/{config['username']}"
     ascii_spans = "\n".join(
-        f'<tspan x="31" y="{82 + index * 15}">{esc(line)}</tspan>'
+        f'<tspan x="43" y="{82 + index * 11.8:.1f}">{esc(line)}</tspan>'
         for index, line in enumerate(avatar)
     )
     rows = "\n".join(
-        [
-            text_row("identity.location", config["location"], 180, c),
-            text_row("identity.company", config["company"], 204, c),
-            text_row("focus.primary", config["focus_primary"], 228, c),
-            text_row("focus.system", config["focus_systems"], 252, c),
-        ]
+        text_row(detail["label"], detail["value"], 184 + index * 24, c)
+        for index, detail in enumerate(config["details"])
     )
 
-    stack_x = 420
+    stack_x = 476
     chips: list[str] = []
     for item in config["stack"]:
         width = 24 + len(item) * 8
         chips.append(
-            f'<rect x="{stack_x}" y="294" width="{width}" height="28" rx="6" '
+            f'<rect x="{stack_x}" y="331" width="{width}" height="28" rx="6" '
             f'fill="{c["panel_alt"]}" stroke="{c["border"]}"/>'
-            f'<text x="{stack_x + width / 2:.1f}" y="313" text-anchor="middle" '
+            f'<text x="{stack_x + width / 2:.1f}" y="350" text-anchor="middle" '
             f'class="chip" fill="{c["value"]}">{esc(item)}</text>'
         )
         stack_x += width + 9
+
+    principle_x = 476
+    principle_chips: list[str] = []
+    for index, principle in enumerate(config["principles"], start=1):
+        label = f"{index:02d} {principle}"
+        width = 20 + len(label) * 7
+        principle_chips.append(
+            f'<rect x="{principle_x}" y="405" width="{width}" height="28" rx="6" '
+            f'fill="{c["panel_alt"]}" stroke="{c["border"]}"/>'
+            f'<text x="{principle_x + width / 2:.1f}" y="424" text-anchor="middle" '
+            f'class="principle" fill="{c["muted"]}">{esc(label)}</text>'
+        )
+        principle_x += width + 9
 
     link_rows = "\n".join(
         text_row(
             link["label"],
             link["value"],
-            366 + index * 22,
+            490 + index * 22,
             c,
-            dots_x=473,
-            value_x=505,
+            dots_x=574,
+            value_x=614,
         )
         for index, link in enumerate(config["links"])
     )
@@ -253,19 +263,19 @@ def render_svg(config: dict, stats: dict, avatar: list[str], theme_name: str) ->
     ]
     stat_markup: list[str] = []
     for index, (value, label) in enumerate(stat_items):
-        x = 420 + index * 143
+        x = 476 + index * 151
         if index:
             stat_markup.append(
-                f'<line x1="{x - 15}" y1="451" x2="{x - 15}" y2="493" '
+                f'<line x1="{x - 15}" y1="580" x2="{x - 15}" y2="620" '
                 f'stroke="{c["border"]}"/>'
             )
         stat_markup.append(
-            f'<text x="{x}" y="470" class="stat" fill="{c["text"]}">{esc(value)}</text>'
-            f'<text x="{x}" y="490" class="stat-label" fill="{c["muted"]}">{esc(label)}</text>'
+            f'<text x="{x}" y="598" class="stat" fill="{c["text"]}">{esc(value)}</text>'
+            f'<text x="{x}" y="618" class="stat-label" fill="{c["muted"]}">{esc(label)}</text>'
         )
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="520" viewBox="0 0 1020 520" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640" role="img" aria-labelledby="title desc">
   <title id="title">{esc(config["display_name"])} — GitHub profile</title>
   <desc id="desc">Terminal-style profile with an ASCII portrait, current focus, technology stack, public links, and live GitHub statistics.</desc>
   <defs>
@@ -285,51 +295,57 @@ def render_svg(config: dict, stats: dict, avatar: list[str], theme_name: str) ->
       .prompt {{ font-size: 14px; font-weight: 600; }}
       .headline {{ font-size: 14px; letter-spacing: 0.15px; }}
       .name {{ font-size: 28px; font-weight: 750; letter-spacing: -0.8px; }}
-      .ascii {{ font-size: 12px; font-weight: 600; white-space: pre; }}
+      .ascii {{ font-size: 11px; font-weight: 600; white-space: pre; }}
       .chip {{ font-size: 12px; font-weight: 700; }}
+      .principle {{ font-size: 11px; font-weight: 650; }}
       .stat {{ font-size: 18px; font-weight: 750; }}
       .stat-label {{ font-size: 9px; font-weight: 700; letter-spacing: 0.8px; }}
       .micro {{ font-size: 10px; letter-spacing: 0.5px; }}
     </style>
   </defs>
 
-  <rect x="12" y="12" width="996" height="496" rx="18" fill="url(#surface)" stroke="{c["border"]}" filter="url(#shadow)"/>
-  <rect x="12" y="12" width="996" height="496" rx="18" fill="url(#grid)"/>
-  <path d="M 30 55 H 990" stroke="{c["border"]}"/>
+  <rect x="12" y="12" width="1096" height="616" rx="18" fill="url(#surface)" stroke="{c["border"]}" filter="url(#shadow)"/>
+  <rect x="12" y="12" width="1096" height="616" rx="18" fill="url(#grid)"/>
+  <path d="M 30 55 H 1090" stroke="{c["border"]}"/>
   <circle cx="35" cy="34" r="5" fill="{c["accent"]}"/>
   <circle cx="54" cy="34" r="5" fill="{c["accent_soft"]}" opacity="0.72"/>
   <circle cx="73" cy="34" r="5" fill="{c["success"]}" opacity="0.88"/>
   <text x="94" y="38" class="micro" fill="{c["muted"]}">~/profiles/{esc(config["username"])}</text>
-  <rect x="924" y="25" width="62" height="18" rx="9" fill="{c["panel_alt"]}" stroke="{c["border"]}"/>
-  <circle cx="937" cy="34" r="3" fill="{c["success"]}"/>
-  <text x="946" y="37.5" class="micro" fill="{c["muted"]}">LIVE</text>
+  <rect x="1024" y="25" width="62" height="18" rx="9" fill="{c["panel_alt"]}" stroke="{c["border"]}"/>
+  <circle cx="1037" cy="34" r="3" fill="{c["success"]}"/>
+  <text x="1046" y="37.5" class="micro" fill="{c["muted"]}">LIVE</text>
 
-  <rect x="28" y="70" width="344" height="420" rx="12" fill="{c["panel_alt"]}" opacity="0.54" stroke="{c["border"]}"/>
+  <rect x="28" y="70" width="400" height="548" rx="12" fill="{c["panel_alt"]}" opacity="0.54" stroke="{c["border"]}"/>
   <text class="ascii" fill="{c["text"]}" opacity="0.88">{ascii_spans}</text>
-  <path d="M 390 70 V 490" stroke="{c["border"]}"/>
-  <path d="M 390 70 V 201" stroke="{c["accent"]}" stroke-width="3"/>
-  <text x="47" y="469" class="micro" fill="{c["muted"]}">ASCII // AVATAR SIGNAL</text>
-  <circle cx="340" cy="465" r="4" fill="{c["success"]}"/>
+  <path d="M 446 70 V 618" stroke="{c["border"]}"/>
+  <path d="M 446 70 V 218" stroke="{c["accent"]}" stroke-width="3"/>
+  <text x="47" y="548" class="prompt" fill="{c["accent"]}">&gt; portrait.render</text>
+  <text x="47" y="571" class="body" fill="{c["muted"]}">56 cols · cell-ratio corrected</text>
+  <text x="47" y="597" class="micro" fill="{c["muted"]}">ASCII // AVATAR SIGNAL</text>
+  <circle cx="396" cy="593" r="4" fill="{c["success"]}"/>
 
-  <text x="420" y="86" class="prompt" fill="{c["accent"]}">{esc(config["terminal_user"])}@{esc(config["username"].lower())}</text>
-  <text x="552" y="86" class="prompt" fill="{c["muted"]}">:~$ whoami</text>
-  <text x="420" y="122" class="name" fill="{c["text"]}">{esc(config["display_name"])}</text>
-  <text x="420" y="148" class="headline" fill="{c["muted"]}">{esc(config["headline"])}</text>
-  <line x1="420" y1="161" x2="985" y2="161" stroke="{c["border"]}"/>
+  <text x="476" y="86" class="prompt" fill="{c["accent"]}">{esc(config["terminal_user"])}@{esc(config["username"].lower())}</text>
+  <text x="608" y="86" class="prompt" fill="{c["muted"]}">:~$ whoami --verbose</text>
+  <text x="476" y="122" class="name" fill="{c["text"]}">{esc(config["display_name"])}</text>
+  <text x="476" y="148" class="headline" fill="{c["muted"]}">{esc(config["headline"])}</text>
+  <line x1="476" y1="161" x2="1090" y2="161" stroke="{c["border"]}"/>
 
   {rows}
 
-  <text x="420" y="282" class="prompt" fill="{c["accent"]}">&gt; stack --active</text>
+  <text x="476" y="318" class="prompt" fill="{c["accent"]}">&gt; stack --active</text>
   {''.join(chips)}
 
-  <text x="420" y="346" class="prompt" fill="{c["accent"]}">&gt; links --public</text>
+  <text x="476" y="392" class="prompt" fill="{c["accent"]}">&gt; principles --signal-only</text>
+  {''.join(principle_chips)}
+
+  <text x="476" y="467" class="prompt" fill="{c["accent"]}">&gt; links --public</text>
   {link_rows}
 
-  <line x1="420" y1="438" x2="985" y2="438" stroke="{c["border"]}"/>
+  <line x1="476" y1="568" x2="1090" y2="568" stroke="{c["border"]}"/>
   {''.join(stat_markup)}
 
   <a href="{esc(profile_url)}">
-    <rect x="12" y="12" width="996" height="496" rx="18" fill="transparent"/>
+    <rect x="12" y="12" width="1096" height="616" rx="18" fill="transparent"/>
   </a>
 </svg>
 '''
